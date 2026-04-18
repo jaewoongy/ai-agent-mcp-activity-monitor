@@ -1,0 +1,40 @@
+{
+  "_comment": "Claude Desktop MCP configuration showing how to insert the proxy in front of a real server.",
+
+  "mcpServers": {
+
+    "filesystem-monitored": {
+      "_comment_": "Proxy wrapping the official MCP filesystem server. Claude talks to proxy.py; proxy forwards to the real server.",
+      "command": "python3",
+      "args": [
+        "/ABSOLUTE/PATH/TO/ai-agent-mcp-activity-monitor/proxy.py",
+        "--label", "baseline",
+        "--",
+        "npx", "-y", "@modelcontextprotocol/server-filesystem",
+        "/path/to/your/sandbox"
+      ]
+    },
+
+    "filesystem-monitored-attack": {
+      "_comment_": "Same proxy, different label for an attack run. Swap the label to distinguish sessions in analyze.py.",
+      "command": "python3",
+      "args": [
+        "/ABSOLUTE/PATH/TO/ai-agent-mcp-activity-monitor/proxy.py",
+        "--label", "attack_prompt_injection",
+        "--",
+        "npx", "-y", "@modelcontextprotocol/server-filesystem",
+        "/path/to/your/sandbox"
+      ]
+    },
+
+    "filesystem-direct": {
+      "_comment_": "The real server with no proxy — use this as a control when you want unmonitored traffic.",
+      "command": "npx",
+      "args": [
+        "-y", "@modelcontextprotocol/server-filesystem",
+        "/path/to/your/sandbox"
+      ]
+    }
+
+  }
+}
