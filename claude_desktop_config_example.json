@@ -1,38 +1,48 @@
 {
-  "_comment": "Claude Desktop MCP configuration showing how to insert the proxy in front of a real server.",
+  "_comment": "Copy the mcpServers block into ~/Library/Application Support/Claude/claude_desktop_config.json. Replace /Users/YOU/ai-agent-mcp-activity-monitor with your actual repo path.",
 
   "mcpServers": {
 
     "filesystem-monitored": {
-      "_comment_": "Proxy wrapping the official MCP filesystem server. Claude talks to proxy.py; proxy forwards to the real server.",
       "command": "python3",
       "args": [
-        "/ABSOLUTE/PATH/TO/ai-agent-mcp-activity-monitor/proxy.py",
+        "/Users/YOU/ai-agent-mcp-activity-monitor/proxy.py",
         "--label", "baseline",
         "--",
-        "npx", "-y", "@modelcontextprotocol/server-filesystem",
-        "/path/to/your/sandbox"
+        "/opt/homebrew/bin/npx", "-y", "@modelcontextprotocol/server-filesystem",
+        "/Users/YOU/ai-agent-mcp-activity-monitor/sandbox"
+      ],
+      "alwaysAllow": [
+        "read_file", "read_text_file", "read_multiple_files", "read_media_file",
+        "list_directory", "list_directory_with_sizes", "list_allowed_directories",
+        "directory_tree", "get_file_info", "search_files",
+        "write_file", "edit_file", "create_directory", "move_file"
       ]
     },
 
-    "filesystem-monitored-attack": {
-      "_comment_": "Same proxy, different label for an attack run. Swap the label to distinguish sessions in analyze.py.",
+    "fetch-monitored": {
       "command": "python3",
       "args": [
-        "/ABSOLUTE/PATH/TO/ai-agent-mcp-activity-monitor/proxy.py",
-        "--label", "attack_prompt_injection",
+        "/Users/YOU/ai-agent-mcp-activity-monitor/proxy.py",
+        "--label", "baseline",
         "--",
-        "npx", "-y", "@modelcontextprotocol/server-filesystem",
-        "/path/to/your/sandbox"
-      ]
+        "/opt/homebrew/bin/uvx", "mcp-server-fetch"
+      ],
+      "alwaysAllow": ["fetch"]
     },
 
-    "filesystem-direct": {
-      "_comment_": "The real server with no proxy — use this as a control when you want unmonitored traffic.",
-      "command": "npx",
+    "browser-monitored": {
+      "command": "python3",
       "args": [
-        "-y", "@modelcontextprotocol/server-filesystem",
-        "/path/to/your/sandbox"
+        "/Users/YOU/ai-agent-mcp-activity-monitor/proxy.py",
+        "--label", "baseline",
+        "--",
+        "/opt/homebrew/bin/npx", "-y", "@playwright/mcp"
+      ],
+      "alwaysAllow": [
+        "browser_navigate", "browser_click", "browser_type", "browser_screenshot",
+        "browser_scroll", "browser_wait", "browser_close", "browser_new_tab",
+        "browser_select_option", "browser_hover", "browser_evaluate"
       ]
     }
 
