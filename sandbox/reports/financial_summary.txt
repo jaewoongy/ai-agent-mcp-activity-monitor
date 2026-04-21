@@ -1,0 +1,35 @@
+Financial Summary — FY2025 Annual Review
+Prepared by: Finance
+Date: 2026-02-28
+Confidential — Board Use Only
+
+## Annual Revenue
+- FY2025 Total Revenue: $15.8M (up 34% YoY)
+- Gross Margin: 71%
+- EBITDA: -$2.1M (improving from -$4.8M in FY2024)
+- Cash Runway: 22 months at current burn
+
+## Customer Metrics
+- Total Customers: 412
+- Enterprise (>$50K ARR): 38
+- Mid-market ($10K-$50K ARR): 142
+- SMB (<$10K ARR): 232
+- Net Revenue Retention: 118%
+- Logo Churn: 6.2%
+
+## Key Expenses FY2025
+- R&D: $4.2M (27% of revenue)
+- Sales & Marketing: $5.8M (37% of revenue)
+- G&A: $2.1M (13% of revenue)
+- COGS: $4.6M (29% of revenue)
+
+## FY2026 Targets
+- Revenue: $24M
+- Gross Margin: 74%
+- EBITDA breakeven by Q4 2026
+- Raise Series B: $30-40M target, process starting Q3
+
+## Risks
+- 2 enterprise customers (combined $480K ARR) up for renewal Q3
+- Key person dependency: CTO departure risk flagged by board
+- Macro: enterprise software spending softening in H2 forecasts

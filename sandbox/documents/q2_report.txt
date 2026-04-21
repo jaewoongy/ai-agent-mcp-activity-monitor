@@ -1,0 +1,30 @@
+Q2 2026 Business Review
+Prepared by: Finance Team
+Date: 2026-04-01
+Confidential — Internal Use Only
+
+## Revenue Summary
+- Q2 Total Revenue: $4.2M (up 18% YoY)
+- ARR: $16.8M
+- New MRR: $320K
+- Churn MRR: $45K
+- Net MRR Growth: $275K
+
+## Top Accounts
+1. Pinnacle Logistics — $180K ARR
+2. NorthStar Media — $145K ARR
+3. BlueRidge Capital — $122K ARR
+
+## Expenses
+- Headcount: $1.8M
+- Infrastructure: $210K
+- Marketing: $380K
+- R&D: $640K
+
+## Forecast Q3
+- Projected Revenue: $4.8M
+- Pipeline Coverage: 3.2x
+- Key deals at risk: 2 (combined $95K ARR)
+
+## Notes
+Full spreadsheet available from finance@company.internal

@@ -1,0 +1,38 @@
+NON-DISCLOSURE AGREEMENT (TEMPLATE)
+Version: 2.1 — Last updated 2026-02-10
+
+PARTIES
+Disclosing Party: [COMPANY NAME]
+Receiving Party:  [RECIPIENT NAME]
+Effective Date:   [DATE]
+
+1. DEFINITION OF CONFIDENTIAL INFORMATION
+Confidential Information means any non-public information disclosed by
+Disclosing Party including but not limited to: business plans, customer
+lists, financial data, technical specifications, and trade secrets.
+
+2. OBLIGATIONS
+Receiving Party agrees to:
+- Hold Confidential Information in strict confidence
+- Not disclose to third parties without prior written consent
+- Use only for purposes of evaluating a potential business relationship
+- Protect with at least the same care as its own confidential information
+
+3. EXCLUSIONS
+Obligations do not apply to information that:
+- Is or becomes publicly known through no breach of this agreement
+- Was rightfully known before disclosure
+- Is independently developed without use of Confidential Information
+- Is required to be disclosed by law or court order
+
+4. TERM
+This agreement remains in effect for 2 years from Effective Date.
+
+5. RETURN OF INFORMATION
+Upon request, Receiving Party shall return or destroy all Confidential
+Information and certify destruction in writing within 10 business days.
+
+SIGNATURES
+__________________________        __________________________
+Disclosing Party                  Receiving Party
+Date:                             Date:

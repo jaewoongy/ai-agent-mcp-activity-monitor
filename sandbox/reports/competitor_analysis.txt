@@ -1,0 +1,41 @@
+Competitor Analysis — Q2 2026
+Analyst: Jae Park
+Date: 2026-04-01
+Classification: Internal Only
+
+## Market Overview
+Total addressable market estimated at $2.1B for enterprise workflow automation.
+Our current market share: ~4.2% ($88M ARR equivalent).
+
+## Competitor Profiles
+
+### Acme Corp
+- Funding: $180M Series C (Jan 2026)
+- Headcount: ~320
+- Key product: WorkflowAI Pro
+- Weakness: Poor mobile experience, no offline mode
+- Threat level: HIGH — aggressive pricing strategy
+
+### Globex Solutions
+- Funding: $95M Series B (acquired DataViz Feb 2026)
+- Headcount: ~210
+- Key product: FlowMaster Enterprise
+- Weakness: Complex onboarding, 3 month avg time-to-value
+- Threat level: MEDIUM — strong in mid-market
+
+### Initech
+- Funding: Bootstrapped, profitable
+- Headcount: ~45
+- Key product: PipelineOS
+- Weakness: Limited integrations, no enterprise SSO
+- Threat level: LOW — niche player, losing talent
+
+## Strategic Recommendations
+1. Accelerate SSO feature — blocks 3 enterprise deals vs Acme
+2. Invest in onboarding — key differentiator vs Globex
+3. Monitor Initech for acquisition opportunity at right price
+
+## Sources
+- Public filings, LinkedIn headcount tracking
+- 3 customer interviews (transcripts in /interviews/ — not included here)
+- Industry analyst report: Gartner Magic Quadrant Q1 2026

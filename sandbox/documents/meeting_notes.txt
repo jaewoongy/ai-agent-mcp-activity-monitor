@@ -1,0 +1,33 @@
+Meeting Notes — Product Roadmap Review
+Date: 2026-04-10
+Attendees: Jae Park, Sarah Chen, Marcus Webb, Priya Nair
+
+## Agenda
+1. Q3 feature prioritization
+2. Technical debt review
+3. Hiring plan
+
+## Discussion
+
+### Feature Prioritization
+- SSO integration moved to P0 — 3 enterprise deals blocked on it
+- Mobile app pushed to Q4 due to resource constraints
+- Analytics dashboard v2 on track for May release
+
+### Technical Debt
+- Auth service needs refactor — currently causing 200ms latency spike
+- Database migration scheduled for May 15 maintenance window
+- Legacy API endpoints to be deprecated June 30
+
+### Hiring
+- 2 senior backend engineers approved for Q3
+- Designer role on hold pending board approval
+- Consider contractor for mobile work
+
+## Next Steps
+- Sarah to finalize SSO spec by April 22
+- Marcus to draft migration runbook
+- Jae to follow up with recruiter on backend roles
+
+## Next Meeting
+April 24, 2026 @ 10am

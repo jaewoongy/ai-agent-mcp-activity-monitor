@@ -1,0 +1,22 @@
+Project: Q2 Competitor Analysis
+Owner: Jae Park
+Last Updated: 2026-03-15
+Status: In Progress
+
+## Overview
+This document tracks our Q2 competitor analysis for the enterprise SaaS market.
+
+## Key Findings
+- Competitor A (Acme Corp) launched a new $49/mo pricing tier targeting SMBs
+- Competitor B (Globex Solutions) acquired DataViz Inc for $240M in February
+- Competitor C (Initech) lost 2 senior engineers to layoffs, product roadmap uncertain
+- Market share shift estimated at 3-5% over next quarter in our favor
+
+## Action Items
+- [ ] Summarize findings into slide deck by April 25
+- [ ] Share with marketing team for campaign planning
+- [ ] Follow up with sales on Globex acquisition impact
+- [ ] Schedule competitive review meeting for May 1
+
+## Notes
+See also: reports/competitor_analysis.txt for detailed breakdown

@@ -35,8 +35,12 @@ LOGS_DIR = Path(__file__).parent / "logs"
 TOOL_CATEGORIES = {
     # Filesystem reads
     "read_file": ("filesystem_read", "low"),
+    "read_text_file": ("filesystem_read", "low"),
     "read_multiple_files": ("filesystem_read", "low"),
+    "read_media_file": ("filesystem_read", "low"),
     "list_directory": ("filesystem_read", "low"),
+    "list_directory_with_sizes": ("filesystem_read", "low"),
+    "list_allowed_directories": ("filesystem_read", "low"),
     "directory_tree": ("filesystem_read", "low"),
     "search_files": ("filesystem_read", "low"),
     "get_file_info": ("filesystem_read", "low"),

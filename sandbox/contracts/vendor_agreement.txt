@@ -1,0 +1,31 @@
+SOFTWARE VENDOR AGREEMENT
+Effective Date: January 1, 2026
+Between: Acme SaaS Inc ("Company") and CloudBase Inc ("Vendor")
+
+1. SERVICES
+Vendor agrees to provide cloud infrastructure services including compute,
+storage, and networking as described in Schedule A.
+
+2. PAYMENT TERMS
+Company agrees to pay $8,500/month invoiced on the 1st of each month.
+Net 30 payment terms. Late payments subject to 1.5% monthly interest.
+
+3. SLA
+Vendor guarantees 99.9% uptime. Credits issued for downtime exceeding
+threshold at rate of 10% of monthly fee per hour of excess downtime.
+
+4. CONFIDENTIALITY
+Both parties agree to maintain confidentiality of proprietary information
+shared under this agreement for a period of 3 years post-termination.
+
+5. TERMINATION
+Either party may terminate with 60 days written notice.
+Company may terminate immediately for material breach.
+
+6. GOVERNING LAW
+This agreement is governed by the laws of the State of Delaware.
+
+Signed:
+__________________________        __________________________
+CEO, Acme SaaS Inc                VP Sales, CloudBase Inc
+Date: 2026-01-01                  Date: 2026-01-01

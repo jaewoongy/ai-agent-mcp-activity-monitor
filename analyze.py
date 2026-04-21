@@ -150,6 +150,23 @@ def extract_urls(arguments: dict) -> list:
     return urls
 
 
+WRITE_TOOLS = {"write_file", "edit_file"}
+BROWSER_TOOLS = {
+    "browser_navigate", "browser_click", "browser_type", "browser_screenshot",
+    "browser_scroll", "browser_hover", "browser_select_option", "browser_evaluate",
+    "browser_new_tab", "browser_close", "browser_wait",
+}
+
+
+def build_results_map(entries: list[dict]) -> dict:
+    """Map jsonrpc_id -> result_snippet from tool_result entries."""
+    return {
+        e["jsonrpc_id"]: e.get("result_snippet", "")
+        for e in entries
+        if e.get("type") == "tool_result" and e.get("jsonrpc_id") is not None
+    }
+
+
 def cmd_show(args):
     summaries = load_summaries()
     session_id = resolve_session_id(args.session_id, summaries)
@@ -168,6 +185,7 @@ def cmd_show(args):
     print(f"Suspicious: {c(RED, str(sc)) if sc else str(sc)}")
 
     calls = tool_entries(entries)
+    results_map = build_results_map(entries)
 
     # --- Tool call frequency histogram ---
     tool_counts = defaultdict(int)
@@ -234,6 +252,52 @@ def cmd_show(args):
         for url, count in sorted(url_counts.items(), key=lambda x: -x[1])[:10]:
             print(f"  {count:>3}x  {url}")
 
+    # --- Files written ---
+    written = [(e, e["arguments"]) for e in calls if e.get("tool_name") in WRITE_TOOLS]
+    if written:
+        print(c(BOLD, "\nFiles written / edited:"))
+        for e, args in written:
+            path = args.get("path", "?")
+            if e.get("tool_name") == "write_file":
+                content = args.get("content", "")
+                snippet = content[:200].replace("\n", "↵")
+                print(f"  {e['ts'][11:19]}  {c(YEL, 'write')}  {path}")
+                print(f"           {DIM}{snippet}{'…' if len(content) > 200 else ''}{RESET}")
+            else:
+                edits = args.get("edits", [])
+                print(f"  {e['ts'][11:19]}  {c(YEL, 'edit ')}  {path}  ({len(edits)} edit(s))")
+                for ed in edits[:3]:
+                    old = ed.get("oldText", "")[:60].replace("\n", "↵")
+                    new = ed.get("newText", "")[:60].replace("\n", "↵")
+                    print(f"           {DIM}- {old}{RESET}")
+                    print(f"           {c(GRN, f'+ {new}')}")
+
+    # --- Browser activity ---
+    browser_calls = [e for e in calls if e.get("tool_name") in BROWSER_TOOLS]
+    if browser_calls:
+        print(c(BOLD, "\nBrowser activity:"))
+        for e in browser_calls:
+            tool = e.get("tool_name", "?")
+            args = e.get("arguments", {})
+            result = results_map.get(e.get("jsonrpc_id"), "")
+            if tool == "browser_navigate":
+                print(f"  {e['ts'][11:19]}  navigate  {c(CYN, args.get('url', '?'))}")
+            elif tool == "browser_click":
+                target = args.get("element") or args.get("selector") or args.get("coordinate") or "?"
+                print(f"  {e['ts'][11:19]}  click     {target}")
+            elif tool == "browser_type":
+                text = str(args.get("text", ""))[:80]
+                print(f"  {e['ts'][11:19]}  type      {DIM}{text}{RESET}")
+            elif tool == "browser_screenshot":
+                print(f"  {e['ts'][11:19]}  {c(YEL, 'screenshot')}")
+            elif tool == "browser_evaluate":
+                expr = str(args.get("expression", ""))[:80]
+                print(f"  {e['ts'][11:19]}  evaluate  {DIM}{expr}{RESET}")
+            else:
+                print(f"  {e['ts'][11:19]}  {tool.replace('browser_', ''):<12}  {str(args)[:80]}")
+            if result:
+                print(f"           {DIM}→ {result[:120]}{RESET}")
+
     # --- Suspicious flags ---
     flags = stats.get("flags", {})
     if flags:
@@ -257,6 +321,9 @@ def cmd_show(args):
                 f"  {e['ts'][11:19]}  {c(col, f'{sens:<6}')}  "
                 f"{c(BOLD, e.get('tool_name','?')):<30}  {args_preview}{flag_str}"
             )
+            result = results_map.get(e.get("jsonrpc_id"))
+            if result:
+                print(f"           {DIM}→ {result[:120]}{RESET}")
 
 
 def _session_summary_block(session_id: str, summaries: list[dict]) -> dict:
