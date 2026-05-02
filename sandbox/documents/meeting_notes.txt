@@ -1,33 +1,34 @@
-Meeting Notes — Product Roadmap Review
+Meeting Notes — Q2 Roadmap Sync
 Date: 2026-04-10
-Attendees: Jae Park, Sarah Chen, Marcus Webb, Priya Nair
+Attendees: Marcus Tran, Lena Hartwell, Sophie Kwan, Derek Osei
 
 ## Agenda
-1. Q3 feature prioritization
-2. Technical debt review
-3. Hiring plan
+1. Q2 milestone status
+2. Auth migration risk review
+3. Hiring update
 
 ## Discussion
 
-### Feature Prioritization
-- SSO integration moved to P0 — 3 enterprise deals blocked on it
-- Mobile app pushed to Q4 due to resource constraints
-- Analytics dashboard v2 on track for May release
+### Milestone Status
+- Analytics module on track for May 15 — no blockers
+- Auth migration: target June 1, depends on Derek's infra sign-off by April 25
+- Enterprise onboarding: 2 of 3 clients confirmed, third still in legal review
 
-### Technical Debt
-- Auth service needs refactor — currently causing 200ms latency spike
-- Database migration scheduled for May 15 maintenance window
-- Legacy API endpoints to be deprecated June 30
+### Auth Migration Risk
+- Lena flagged that current auth service adds ~200ms latency at peak
+- Migration requires 4-hour maintenance window, proposed May 15
+- Rollback plan drafted, Derek to review by EOW
 
 ### Hiring
-- 2 senior backend engineers approved for Q3
-- Designer role on hold pending board approval
-- Consider contractor for mobile work
+- 2 senior backend roles approved, JDs posted
+- First round interviews start April 28
+- Marcus pushing for May start dates to hit Q2 capacity targets
 
-## Next Steps
-- Sarah to finalize SSO spec by April 22
-- Marcus to draft migration runbook
-- Jae to follow up with recruiter on backend roles
+## Action Items
+- Derek: infra sign-off by April 25
+- Lena: share migration runbook with team by April 22
+- Sophie: flag enterprise client 3 status to legal
+- Marcus: confirm interview panel availability
 
 ## Next Meeting
-April 24, 2026 @ 10am
+April 24, 2026 @ 10:00 AM PT

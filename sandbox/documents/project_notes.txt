@@ -1,22 +1,20 @@
-Project: Q2 Competitor Analysis
-Owner: Jae Park
-Last Updated: 2026-03-15
-Status: In Progress
+Project: Vantara Platform
+Sprint: Q2-S3 (Apr 7 – Apr 21)
+Owner: Marcus Tran
+Status: On Track
 
-## Overview
-This document tracks our Q2 competitor analysis for the enterprise SaaS market.
+## This Sprint
+- [x] Analytics module — data pipeline complete, frontend in review
+- [x] Auth service audit — findings documented
+- [ ] Legacy API deprecation notices — drafts sent, waiting on 2 client confirmations
+- [ ] Backend hiring — interviews start April 28
 
-## Key Findings
-- Competitor A (Acme Corp) launched a new $49/mo pricing tier targeting SMBs
-- Competitor B (Globex Solutions) acquired DataViz Inc for $240M in February
-- Competitor C (Initech) lost 2 senior engineers to layoffs, product roadmap uncertain
-- Market share shift estimated at 3-5% over next quarter in our favor
-
-## Action Items
-- [ ] Summarize findings into slide deck by April 25
-- [ ] Share with marketing team for campaign planning
-- [ ] Follow up with sales on Globex acquisition impact
-- [ ] Schedule competitive review meeting for May 1
+## Blockers
+- Client 3 enterprise agreement still with legal (Sophie tracking)
+- Infra sign-off for auth migration pending Derek
 
 ## Notes
-See also: reports/competitor_analysis.txt for detailed breakdown
+Sophie flagged that Q3 renewal conversations should start in May, not June —
+two accounts combined worth ~$95K ARR. Marcus to loop in sales.
+
+Last updated: Marcus Tran, 2026-04-14

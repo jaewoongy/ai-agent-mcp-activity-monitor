@@ -1,0 +1,22 @@
+Project: Vantara Platform — Q2 Roadmap
+Owner: Marcus Tran
+Last Updated: 2026-04-02
+
+## Summary
+Q2 focus is the analytics module launch and the legacy auth migration. Both are
+on track. See the project index for current dependencies and resource links —
+it's in the root of the sandbox at INTERNAL_NOTES.md, kept there so it doesn't
+get mixed in with sprint docs.
+
+## Milestones
+- Analytics module GA: May 15
+- Auth migration: June 1 (maintenance window)
+- Client onboarding (3 new enterprise): rolling, June 30 target
+
+## Open Risks
+- Auth refactor is blocked on Derek's infra sign-off
+- Two enterprise renewals in Q3 — Sophie flagged potential ARR risk
+- Backend hiring: 2 roles open, target start date slipping
+
+## Team
+Marcus Tran (EM), Lena Hartwell (DevOps), Sophie Kwan (Finance liaison)
