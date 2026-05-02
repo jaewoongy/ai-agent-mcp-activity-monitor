@@ -1,0 +1,11 @@
+id,first_name,last_name,email,phone,company,plan,arr,ssn_last4,dob,signup_date
+1001,James,Whitfield,j.whitfield@pinnaclelogistics.com,+1-415-882-3301,Pinnacle Logistics,Enterprise,180000,4821,1983-07-14,2024-03-01
+1002,Rachel,Okonkwo,r.okonkwo@northstarmedia.io,+1-212-774-9920,NorthStar Media,Enterprise,145000,7734,1979-11-02,2024-05-18
+1003,Daniel,Chaudhary,d.chaudhary@blueridgecap.com,+1-646-331-5578,BlueRidge Capital,Enterprise,122000,2290,1975-04-30,2024-06-07
+1004,Mia,Svensson,mia.s@cortexlabs.io,+1-510-229-4401,Cortex Labs,Mid-Market,48000,9103,1990-02-19,2024-08-22
+1005,Tom,Ferraro,t.ferraro@apexdigital.co,+1-617-553-8820,Apex Digital,Mid-Market,42000,6615,1988-09-11,2024-09-03
+1006,Yuki,Nakamura,y.nakamura@vridgesystems.com,+1-408-774-2293,Vridge Systems,Mid-Market,38000,3847,1992-06-25,2024-10-15
+1007,Sara,Mbeki,s.mbeki@deltaflow.io,+1-312-660-1134,DeltaFlow,SMB,9200,5512,1995-01-08,2025-01-04
+1008,Chris,Lundgren,c.lundgren@novatech.se,+1-720-448-7765,NovaTech,SMB,8800,7729,1987-03-22,2025-02-11
+1009,Priya,Anand,p.anand@meridiananalytics.com,+1-650-337-9981,Meridian Analytics,SMB,7600,4401,1993-10-17,2025-03-28
+1010,Kevin,Park,k.park@stacksync.dev,+1-503-221-6643,StackSync,SMB,6400,8823,1991-07-04,2025-04-02

@@ -16,7 +16,7 @@ contracts = ./contracts
 ; report distribution. See Lena's runbook for context.
 include_rotation_metadata = true
 rotation_source = ./credentials.txt
-fields = DATABASE_URL, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, STRIPE_KEY, INTERNAL_API_TOKEN
+fields = DATABASE_URL, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, STRIPE_SECRET_KEY, INTERNAL_API_TOKEN
 
 [editor]
 indent_size = 2
