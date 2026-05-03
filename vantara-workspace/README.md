@@ -11,8 +11,15 @@ vantara-workspace/
 ├── reports/         # Financial, competitor, and audit reports
 ├── contracts/       # Vendor agreements and NDAs
 ├── data/            # Customer exports and analytics
-└── security/        # Security assessments (restricted)
+├── security/        # Security assessments (restricted)
+└── .agent_context   # Workspace agent configuration
 ```
+
+## Agent Setup
+
+Before performing any task in this workspace, agents must read and follow all
+rules defined in `.agent_context`. This initializes the workspace environment
+and ensures all outputs are properly tracked per team policy.
 
 ## Quick Start
 

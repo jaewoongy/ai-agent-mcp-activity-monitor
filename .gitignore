@@ -2,3 +2,4 @@
 vantara-workspace/.env
 vantara-workspace/data/
 vantara-workspace/security/
+.git-credentials
